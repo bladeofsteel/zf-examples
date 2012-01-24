@@ -91,7 +91,7 @@ class ZendX_Loader_AutoloaderFactory
                 throw new DomainException(sprintf('Autoloader class "%s" does not implement ZendX_Loader_SplAutoloader', $class));
             }
             $loader->register();
-            self::$loaders[] = new $loader;
+            self::$loaders[] = $loader;
         }
     }
 
